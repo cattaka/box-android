@@ -62,14 +62,14 @@ script: |
   source $WERCKER_SOURCE_DIR/install-sdk.sh
   source $WERCKER_SOURCE_DIR/update-sdk.sh
 
-  export GRADLE_VERSION=2.2.1
+#  export GRADLE_VERSION=2.2.1
   # install graddle
-  source $WERCKER_SOURCE_DIR/install-gradle.sh
+#  source $WERCKER_SOURCE_DIR/install-gradle.sh
 
-  export GRADLE_HOME=$HOME/gradle-$GRADLE_VERSION
+#  export GRADLE_HOME=$HOME/gradle-$GRADLE_VERSION
   export PATH=$PATH:$GRADLE_HOME/bin
 
-  echo "export GRADLE_HOME=\"${GRADLE_HOME}\"" | sudo tee -a $profile
+#  echo "export GRADLE_HOME=\"${GRADLE_HOME}\"" | sudo tee -a $profile
   echo "export PATH=\"${PATH}:${GRADLE_HOME}/bin\"" | sudo tee -a $profile
   cat $profile
   cd $HOME
